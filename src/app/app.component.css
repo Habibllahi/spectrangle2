@@ -1,0 +1,124 @@
+.header-nav{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 500;
+}
+.banner-main{
+  position: relative;
+  top: 50px;
+}
+
+
+.on-scroll{
+  background-color: rgb(0, 0, 0.99);
+}
+.white-icon{
+  color: white;
+}
+.bg-img{
+  max-width: 100%;
+}
+.bg-img-container{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: opx;
+  z-index: -500;
+  height: 100%;
+}
+.router-link-active{
+  color: rgb(47, 0, 255) !important;
+}
+.brand{
+  width: 100px;
+  height: inherit;
+}
+.logo {
+  max-width: 100%;
+}
+
+.header-nav a{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+
+
+/* small screen navigation style*/
+.small{
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: 'Cormorant Garamond', serif;
+ }
+.spacer-small{
+  flex: 1 1 auto;
+}
+.small a{
+  width: 100%;
+  display: block;
+}
+.small-nav-sector-a{
+  font-size: 1.3rem;
+}
+/*medium screen styling: this styling will apply to large screen aswell*/
+.medium{
+  background-color: transparent;
+  background: transparent;
+  opacity: 0.9;
+  font-family: 'Cormorant Garamond', serif;
+ }
+.medium a{
+  max-width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  padding-right: 2%;
+  padding-left: 2%;
+}
+
+.medium-nav-sector{
+  width: 100%;
+}
+.medium-nav-sector{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.medium-nav-sector-a{
+  flex: 1 1 auto;
+  font-size: 1.3rem;
+}
+
+
+/**headline style*/
+.headline{
+  font-size: 1.3rem;
+  margin: 20px 0px 10px 0px;
+  max-width: 100%;
+  height: fit-content;
+  text-align: start;
+  line-height: 1.6em;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+.headline-button{
+  font-family: 'Cormorant Garamond', serif;
+}
+
+@media only screen and (min-width: 767px){
+  .headline{
+    font-size: 2rem;
+    margin: 30px 0px 20px 0px;
+    max-width: 50%;
+    height: fit-content;
+    text-align: start;
+    line-height: 1.4em;
+  }
+}
+
+@media only screen and (min-width: 991px){
+  .headline{
+    font-size: 2.2rem;
+    margin: 40px 0px 30px 0px;
+    line-height: 1.3em;
+  }
+}

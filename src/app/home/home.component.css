@@ -1,0 +1,69 @@
+.content-header{
+  color: white;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+.content-body{
+  color: gray;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+}
+.content{
+  line-height: 1.5rem;;
+}
+.dev-image-container{
+  max-height: 300px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.images{
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.wrapper{
+  background-color: rgba(0, 0, 0, 0.801);
+}
+
+.section{
+  margin-top: 400px; /*change accordingly to ensure only the banner-main class of the app.component.html shows in the screen until scroll*/
+}
+
+@media only screen and (min-width: 750px){
+  .section{
+    margin-top: 400px; /*change accordingly to ensure only the banner-main class of the app.component.html shows in the screen until scroll*/
+    margin-left: auto;
+  }
+  .dev-image-container{
+    margin-left: 100px;
+    margin-left: auto;
+  }
+  .wrapper{
+    background-color: rgba(0, 0, 0, 0.616);
+  }
+}
+
+@media only screen and (width: 800px){
+  .section{
+    margin-top: 200px;
+  }
+}
+
+@media only screen and (width: 600px){
+  .section{
+    margin-top: 200px;
+  }
+}
+
+@media only screen and (min-width: 991px){
+  .section{
+    margin-top: 500px; /*change accordingly to ensure only the banner-main class of the app.component.html shows in the screen until scroll*/
+  }
+  .dev-image-container{
+    margin-left: 150px;
+  }
+  .wrapper{
+    background-color: rgba(0, 0, 0, 0.616);
+  }
+}
