@@ -1,0 +1,49 @@
+.icon{
+  border-radius: 100%;
+  background-color: blue;
+  width: 40px;
+  height: 40px;
+  color: white;
+  padding: 10px;
+}
+.card{
+  height: 200px;
+  width: 90%;
+  background-color: rgb(12, 12, 12);
+  border: 2px solid rgb(12, 12, 12);
+  border-radius: 5%;
+}
+.card-title{
+  font-family: 'Merriweather Sans', sans-serif;
+  color: white;
+}
+.card-body{
+  font-family: 'Cormorant Garamond', serif;
+  color: white;
+  font-size: 1rem;
+}
+.dark-font-color{
+  color: black;
+}
+.card:hover{
+  width: 100%;
+  height: 210px;
+  background-color: rgb(83, 195, 233);
+}
+@media only screen and (min-width: 753px){
+  .card{
+    height: 210px;
+  }
+  .card:hover{
+    height: 220px;
+  }
+}
+
+@media only screen and (min-width: 992px){
+  .card{
+    height: 300px;
+  }
+  .card:hover{
+    height: 310px;
+  }
+}

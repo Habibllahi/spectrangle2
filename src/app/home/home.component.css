@@ -23,13 +23,107 @@
 }
 
 .wrapper{
-  background-color: rgba(0, 0, 0, 0.801);
+  background-color: rgba(0, 0, 0, 0.870);
 }
 
 .section{
   margin-top: 400px; /*change accordingly to ensure only the banner-main class of the app.component.html shows in the screen until scroll*/
 }
+/***card related styling***/
+.card-wrapper{
+  background-color: rgba(0, 0, 0, 0.877);
+}
 
+.why-work-with-us-wrapper{
+  background-color: rgba(0, 0, 0, 0.866) !important;
+}
+
+.why-work-with-us-wrapper h1{
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.why-work-with-us-wrapper p, .comment{
+  font-family: 'Cormorant Garamond', serif;
+  line-height: 1.7rem;
+  font-size: 1.3rem;
+}
+
+/**Bubble speech style**/
+.avatar-detail-hidden{
+  display: none;
+}
+.testimonial{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.avatar{
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border: 1px solid black;
+}
+
+.avatar-name{
+  font-family: 'Cormorant Garamond', serif;
+  text-align: center;
+}
+
+.avatar-title{
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.avatar-more{
+  color: black;
+}
+.avatar-more *{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.avatar>img{
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+.bubble-speech-wrapper{
+  background-color: rgb(83, 195, 233);
+}
+.bubble {
+	height: fit-content; /*shoud be latter set to fit content*/
+	width: fit-content;
+	background: ivory;
+	display: block;
+	margin: 0 auto;
+	border-radius: 20px;
+  color: black;
+  padding: 50px;
+}
+.pointer {
+	height: 40px;
+	width: 40px;
+	background: ivory;
+	margin: 0 auto;
+	transform: rotate(45deg);
+	border-radius: 0 0 12px 0;
+	margin-top: -22px;
+	position: relative;
+	left: calc(0.5vw - 50px);
+}
+.comment{
+  text-align: left;
+}
+.blurred {
+	background: gray;
+	filter: blur(20px);
+	position: relative;
+	top: -315px;
+/* 	transform: scale(1.05); */
+	z-index: -1;
+}
+/*bubble speech styling ends*/
 @media only screen and (min-width: 750px){
   .section{
     margin-top: 400px; /*change accordingly to ensure only the banner-main class of the app.component.html shows in the screen until scroll*/
@@ -40,7 +134,17 @@
     margin-left: auto;
   }
   .wrapper{
-    background-color: rgba(0, 0, 0, 0.616);
+    background-color: rgba(0, 0, 0, 0.868);
+  }
+  .x{
+    display: block;
+  }
+
+  .y{
+    display: block;
+  }
+  .why-work-with-us-wrapper h1{
+    text-align: center;
   }
 }
 
@@ -64,6 +168,6 @@
     margin-left: 150px;
   }
   .wrapper{
-    background-color: rgba(0, 0, 0, 0.616);
+    background-color: rgba(0, 0, 0, 0.866);
   }
 }

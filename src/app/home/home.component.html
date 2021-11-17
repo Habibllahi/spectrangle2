@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <section class="container section">
+  <div class="container section">
     <article class="row pt-5">
       <section class="col-lg-6 col-md-5 col-sm-12 content">
         <h1 class="content-header font-weight-bold">{{contentHeader}}</h1>
@@ -9,5 +9,52 @@
       </section>
       <section class="col-lg-6 col-md-7 col-sm-12 dev-image-container"><img class="images" [src]="imageSrc" alt=""></section>
     </article>
-  </section>
+  </div>
 </div>
+<div class="why-work-with-us-wrapper">
+  <div class="container pt-5">
+    <article class="row">
+      <h1 class="col-12 col-md-6">
+        <span class="x">Why work with us </span> <span class="y">at Spectrangle?</span>
+      </h1>
+      <p class="col-12 col-md-6">
+        We at Spectrangle hire and manage the best talents for in-house projects and external companies globally, thereby
+        creating, building, and strengthing your project and products with the best team available.
+      </p>
+    </article>
+  </div>
+</div>
+<div class="card-wrapper">
+  <div class="container pt-4">
+    <article class="row">
+      <app-feature-card  [cardTitle]="card_1_title" class="col-lg-3 mb-1 mb-sm-2 mb-md-3 col-md-6" [cardBody]="card_1_body" cardIcon="timeline"></app-feature-card>
+      <app-feature-card  [cardTitle]="card_2_title" class="col-lg-3 mb-1 mb-sm-2 mb-md-3 col-md-6" [cardBody]="card_2_body" cardIcon="build"></app-feature-card>
+      <app-feature-card  [cardTitle]="card_3_title" class="col-lg-3 mb-1 mb-sm-2 mb-md-3 col-md-6" [cardBody]="card_3_body" cardIcon="trending_up"></app-feature-card>
+      <app-feature-card  [cardTitle]="card_4_title" class="col-lg-3 mb-1 mb-sm-2 mb-md-3 col-md-6"  [cardBody]="card_4_body" cardIcon="near_me"></app-feature-card>
+    </article>
+  </div>
+</div>
+<!--Bubble speech code-->
+<div class="bubble-speech-wrapper">
+  <div class="container pt-5 pb-5">
+    <div class="bubble col-12" *ngIf="testimonial_.selected"><q class="comment">{{testimonial_.quote}}</q></div>
+    <!--<div class="pointer" *ngIf="testimoniall.selected"></div>-->
+  </div>
+  <div class="container" (mouseleave)="resetTestimoniallToDefault()">
+    <div class="row">
+      <div class="avatar-more pb-3 col-lg-4 col-md-4 col-sm-4 col-6" *ngFor="let testimonial of testimonials" >
+        <div class="testimonial">
+          <div class="avatar">
+            <img [src]="testimonial.imageSrc" alt="recommendator avatar" (mouseenter)="onMouseEnterTestimonial(testimonial)">
+          </div>
+          <div [class.avatar-detail-hidden]="!testimonial.selected">
+            <h1 class="avatar-name mb-0">{{testimonial.title}}</h1>
+            <h1 class="avatar-name mb-0">{{testimonial.name}}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  <div class="pointer" *ngIf="recommendation[0].selected"></div>-->

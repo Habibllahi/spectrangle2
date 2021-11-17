@@ -1,7 +1,7 @@
-<mat-card>
-  <mat-card-header>
-    <div mat-card-avatar></div>
-    <mat-card-title>{{cardTitle}}</mat-card-title>
+<mat-card class="card container-fluid" (mouseenter)="onMouseEnterCard()" (mouseleave)="onMouseLeaveCard()">
+  <mat-card-header class="row">
+    <div mat-card-avatar class="col-12 mb-4"><mat-icon class="icon">{{cardIcon}}</mat-icon></div>
+    <mat-card-title class="col-12 card-title" [class.dark-font-color] = "hasDarkFontColor">{{cardTitle}}</mat-card-title>
   </mat-card-header>
-  <mat-card-content>{{cardBody}}</mat-card-content>
+  <mat-card-content class="col-12 card-body" [class.dark-font-color] = "hasDarkFontColor" #card_content>{{cardBody}}</mat-card-content>
 </mat-card>
