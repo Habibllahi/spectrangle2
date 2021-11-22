@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
 import { JoinNewtworkComponent } from './join-network/join-newtwork.component';
 import { OurCultureComponent } from './our-culture/our-culture.component';
+import { WorkWithUsComponent } from './work-with-us/work-with-us.component';
 
 const routes: Routes = [
   {
@@ -11,8 +11,8 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'about-us',
-    component: AboutUsComponent
+    path: 'work-with-us',
+    component: WorkWithUsComponent
   },
   {
     path: 'our-culture',

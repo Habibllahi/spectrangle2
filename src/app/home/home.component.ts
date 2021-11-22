@@ -71,8 +71,14 @@ export class HomeComponent implements OnInit, OnDestroy {
       id: 6
     }
   ]
+  public why_work_with_us: string = 'We at Spectrangle hire and manage the best talents for in-house projects and external companies globally, thereby' +
+  'creating, building, and strengthing your project and products with the best team available.';
+  public have_you_part1 : string = 'Have an idea you want to ';
+  public have_you_part2: string = 'change in to project';
+  public book_appointment: string = 'Book Appointment';
 
   public testimonial_: Testimonial =  this.testimonials[0]
+  public book_apointment_img = "../assets/book_apointment_img.jpg"
 
   constructor(private screen: BreakpointObserver) { }
   ngOnDestroy(): void {
@@ -96,10 +102,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     })
   }
 
-  public resetTestimoniallToDefault(){
-    this.testimonial_ = this.testimonials[0];
-    this.testimonial_.selected = true;
-  }
   public watchScreen(){
     this.screenSub = this.screen.observe([Breakpoints.XSmall,Breakpoints.Small, Breakpoints.Medium, Breakpoints.Large, Breakpoints.XLarge]).subscribe(
       screen => {

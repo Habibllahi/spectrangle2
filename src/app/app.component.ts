@@ -20,8 +20,8 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit{
       fragment: '/home'
     },
     {
-      link:'About us',
-      fragment: '/about-us'
+      link:'Work with us',
+      fragment: '/work-with-us'
     },
     {
       link:'Our culture',

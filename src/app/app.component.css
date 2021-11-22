@@ -47,7 +47,7 @@
 
 /* small screen navigation style*/
 .small{
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.945);
   font-family: 'Cormorant Garamond', serif;
  }
 .spacer-small{
@@ -104,6 +104,17 @@
   font-family: 'Cormorant Garamond', serif;
 }
 
+/**Styles relating to footer **/
+.footer-wrapper{
+  background-color: black;
+}
+.footer-wrapper.company-name{
+  padding-top: auto;
+  padding-bottom: auto;
+}
+.d-flex{
+  flex-wrap: wrap;
+}
 @media only screen and (min-width: 767px){
   .headline{
     font-size: 2rem;

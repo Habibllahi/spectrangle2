@@ -7,7 +7,7 @@
         <div class="brand"><img [routerLink]="['/join-network']" class="col-md-2 logo" src="../assets/Spectrangle.png" alt="spectrangle logo"/></div>
       </mat-toolbar-row>
       <mat-toolbar-row *ngIf="navState==='open'"><a class="small-nav-sector-a" (click)='toggleNav()' [routerLink]="['/home']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">Home</a></mat-toolbar-row>
-      <mat-toolbar-row *ngIf="navState==='open'"><a class="small-nav-sector-a" (click)='toggleNav()' [routerLink]="['/about-us']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">About us</a></mat-toolbar-row>
+      <mat-toolbar-row *ngIf="navState==='open'"><a class="small-nav-sector-a" (click)='toggleNav()' [routerLink]="['/work-with-us']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">Work with us</a></mat-toolbar-row>
       <mat-toolbar-row *ngIf="navState==='open'"><a class="small-nav-sector-a" (click)='toggleNav()' [routerLink]="['/our-culture']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">Our culture</a></mat-toolbar-row>
       <mat-toolbar-row *ngIf="navState==='open'"><a class="small-nav-sector-a" (click)='toggleNav()' [routerLink]="['/join-network']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">Join us</a></mat-toolbar-row>
     </mat-toolbar>
@@ -36,7 +36,25 @@
   <router-outlet ></router-outlet>
 </main>
 <footer>
-
+  <div class="footer-wrapper">
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-md-3 d-flex">
+          <div class="w-25"><img class="w-100" src="../assets/Spectrangle.png" alt="logo"></div>
+          <h1 class="w-75 company-name">Spectrangle</h1>
+        </div>
+        <div class="col-md-3">
+          <h1>Program</h1>
+        </div>
+        <div class="col-md-3">
+          <h1>Company</h1>
+        </div>
+        <div class="col-md-3">
+          <h1>Hire Talent</h1>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 
 
