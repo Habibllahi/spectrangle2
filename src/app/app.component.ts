@@ -20,8 +20,8 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit{
       fragment: '/home'
     },
     {
-      link:'Work with us',
-      fragment: '/work-with-us'
+      link:'Request service',
+      fragment: '/appointment'
     },
     {
       link:'Our culture',
@@ -29,11 +29,14 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit{
     },
     {
       link:'Join us',
-      fragment: '/join-network'
+      fragment: '/application'
     }
   ]
 
-  screenSub!: Subscription;
+  public screenSub!: Subscription;
+  public about_us: string = "Spectrangle is a tech firm that provides solutions to real-life problems accross all industries. We" +
+  " are a set of developers and talented minds";
+  public address: string = "Office 5, Adegbite complex, Agbowo UI"
 
   constructor(private screen: BreakpointObserver, private elementRef: ElementRef){
 

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JoinNewtworkComponent } from './join-newtwork.component';
+import { ApplicationComponent } from './application.component';
 
-describe('JoinNewtworkComponent', () => {
-  let component: JoinNewtworkComponent;
-  let fixture: ComponentFixture<JoinNewtworkComponent>;
+describe('ApplicationComponent', () => {
+  let component: ApplicationComponent;
+  let fixture: ComponentFixture<ApplicationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ JoinNewtworkComponent ]
+      declarations: [ ApplicationComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(JoinNewtworkComponent);
+    fixture = TestBed.createComponent(ApplicationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

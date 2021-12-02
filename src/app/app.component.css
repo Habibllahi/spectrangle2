@@ -107,6 +107,7 @@
 /**Styles relating to footer **/
 .footer-wrapper{
   background-color: black;
+  font-family: 'Cormorant Garamond', serif;
 }
 .footer-wrapper.company-name{
   padding-top: auto;
@@ -114,6 +115,12 @@
 }
 .d-flex{
   flex-wrap: wrap;
+  flex-shrink: 1;
+}
+.footer-wrapper a{
+  display: block;
+  color: white;
+  text-decoration: none;
 }
 @media only screen and (min-width: 767px){
   .headline{

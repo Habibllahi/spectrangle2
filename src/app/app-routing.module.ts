@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ApplicationComponent } from './application/application.component';
+import { AppointmentComponent } from './appointment/appointment.component';
 import { HomeComponent } from './home/home.component';
-import { JoinNewtworkComponent } from './join-network/join-newtwork.component';
 import { OurCultureComponent } from './our-culture/our-culture.component';
-import { WorkWithUsComponent } from './work-with-us/work-with-us.component';
+
 
 const routes: Routes = [
   {
@@ -11,16 +12,16 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'work-with-us',
-    component: WorkWithUsComponent
+    path: 'appointment',
+    component: AppointmentComponent
   },
   {
     path: 'our-culture',
     component: OurCultureComponent
   },
   {
-    path: 'join-network',
-    component: JoinNewtworkComponent
+    path: 'application',
+    component: ApplicationComponent
   },
   {
     path: '',
@@ -31,7 +32,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    initialNavigation: 'enabledBlocking'
+})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
