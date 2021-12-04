@@ -10,17 +10,20 @@ import { AppointmentWrapper } from '../types/AppointmentWrapper';
 export class FormService {
 
   private appointmentUrl: string = "https://spectrangles-website-server.herokuapp.com/api/appointment"
-  constructor(private http: HttpClient) { }
+  private encodedCredentials: string = `Basic ${btoa("spectrangletechnologies@gmail.com"+":"+"efbb588c-9374-4995-aa3f-87d614acd7f0")}`;
+  private httpHeaders = new HttpHeaders();
+
+  constructor(private http: HttpClient) {
+    this.httpHeaders = this.httpHeaders
+    .set("Authorization",this.encodedCredentials)
+    .set("Accept","application/json")
+    .set("Content-Type","application/json");
+  }
 
   public postAppointmentForm(appontment: Appointment){
-    const encodedCredentials: string = `Basic ${btoa("spectrangletechnologies@gmail.com"+":"+"efbb588c-9374-4995-aa3f-87d614acd7f0")}`;
-    let httpHeaders = new HttpHeaders();
-    httpHeaders = httpHeaders
-      .set("Authorization",encodedCredentials)
-      .set("Accept","application/json")
-      .set("Content-Type","application/json");
+
     return this.http.post<Appointment>(this.appointmentUrl,appontment,{
-      headers: httpHeaders
+      headers: this.httpHeaders
     }).pipe(map(value=>{
         return <AppointmentWrapper>{
           message: undefined,
