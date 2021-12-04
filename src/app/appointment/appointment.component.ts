@@ -12,7 +12,8 @@ import { Appointment } from '../types/Appointment';
 export class AppointmentComponent implements OnInit, OnDestroy {
   public appointment_image: String = "../assets/book_apointment_img.jpg"
   public message: string | undefined =  undefined;
-  public appointmentFormSubscription!: Subscription
+  public appointmentFormSubscription!: Subscription;
+
   public appointment: Appointment = {
     companyName: "",
     country: "",
@@ -24,6 +25,11 @@ export class AppointmentComponent implements OnInit, OnDestroy {
     workAddress:'',
     workType:""
   }
+  public alert_success: boolean = false;
+  public alert_warn: boolean = false;
+  public spin: boolean = false;
+  public form_invalid = false;
+  private appointmentUrl: string = "https://spectrangles-website-server.herokuapp.com/api/appointment";
   constructor(private formService: FormService) { }
   ngOnDestroy(): void {
     if(this.appointmentFormSubscription){
@@ -36,13 +42,21 @@ export class AppointmentComponent implements OnInit, OnDestroy {
   }
 
   public onSubmit(appointmentForm: NgForm): void{
+    this.spin = true;
     if(appointmentForm.form.valid){
-      this.appointmentFormSubscription = this.formService.postAppointmentForm(this.appointment).subscribe(
+      this.form_invalid = false;
+      this.appointmentFormSubscription = this.formService.postForm(this.appointment, this.appointmentUrl).subscribe(
         result => {
           if(result.message){
-            this.message = result.message
+            this.message = result.message;
+            this.alert_warn = true;
+            this.alert_success = false;
+            this.spin = false;
           }else{
-            this.message = "submission sucessful"
+            this.alert_success = true;
+            this.alert_warn = false;
+            this.spin = false;
+            this.message = "submission sucessful";
             this.appointment = {
               companyName: "",
               country: "",
@@ -57,7 +71,17 @@ export class AppointmentComponent implements OnInit, OnDestroy {
           }
         }
       );
+    }else{
+      this.alert_success = false;
+      this.alert_warn = false;
+      this.spin = false;
+      this.form_invalid = true;
     }
+  }
+
+  public clearAlert(): void{
+    this.alert_success = false;
+    this.alert_warn = false;
   }
 
 }

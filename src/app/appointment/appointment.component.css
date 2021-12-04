@@ -3,3 +3,11 @@
   height: 100%;
 }
 
+.mat-spinner {
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+}
+

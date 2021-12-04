@@ -1,97 +1,154 @@
 <div class="application-wrapper">
   <div class="application-section container-fluid">
+    <div class="row" *ngIf="spin">
+      <mat-progress-spinner mode="indeterminate" class="spinner mat-spinner"></mat-progress-spinner>
+    </div>
     <div class="row">
       <form #applicationForm="ngForm" class="application-form col-lg-8 col-md-8">
-        <legend class="application-legend"><h1>Personal Information</h1></legend>
-        <mat-form-field class="col-lg-6 form-field">
-          <mat-label>First name</mat-label>
-          <input matInput type="text" [(ngModel)]="application.firstName" name="firstName" id="first-name" required>
-        </mat-form-field>
+        <fieldset>
+          <legend class="application-legend"><h1>Personal Information</h1></legend>
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>First name</mat-label>
+            <input matInput type="text" [(ngModel)]="application.firstName" name="firstName" id="first-name" required>
+          </mat-form-field>
 
-        <mat-form-field class="col-lg-6 form-field">
-          <mat-label>Last name</mat-label>
-          <input matInput type="text" [(ngModel)]="application.lastName" name="lastName" id="last-name" required>
-        </mat-form-field>
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Last name</mat-label>
+            <input matInput type="text" [(ngModel)]="application.lastName" name="lastName" id="last-name" required>
+          </mat-form-field>
 
-        <mat-form-field class="col-lg-6 form-field">
-          <mat-label>Email Address</mat-label>
-          <input matInput type="email" [(ngModel)]="application.email" name="emailAddress" id="email-address" required>
-        </mat-form-field>
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Email Address</mat-label>
+            <input matInput type="email" [(ngModel)]="application.email" name="emailAddress" id="email-address" required>
+          </mat-form-field>
 
-        <mat-form-field class="col-lg-6 form-field">
-          <mat-label>Phone Number</mat-label>
-          <input matInput type="tel" [(ngModel)]="application.phoneNumber" name="phoneNumber" id="phone-number" required>
-        </mat-form-field>
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Phone Number</mat-label>
+            <input matInput type="tel" [(ngModel)]="application.phoneNumber" name="phoneNumber" id="phone-number" required>
+          </mat-form-field>
 
-        <mat-form-field class="col-lg-6 form-field">
-          <mat-label>Country</mat-label>
-          <mat-select [(ngModel)]="application.country" required name="country" id="country">
-            <mat-option value="Nigeria">Nigeria</mat-option>
-            <mat-option value="USA">USA</mat-option>
-          </mat-select>
-        </mat-form-field>
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Country</mat-label>
+            <mat-select [(ngModel)]="application.country" required name="country" id="country">
+              <mat-option value="Nigeria">Nigeria</mat-option>
+              <mat-option value="USA">USA</mat-option>
+            </mat-select>
+          </mat-form-field>
 
-        <mat-form-field class="col-lg-6 form-field">
-          <mat-label>City</mat-label>
-          <mat-select [(ngModel)]="application.city" required name="city" id="city">
-            <mat-option value="Oyo">Oyo</mat-option>
-            <mat-option value="Lagos">Lagos</mat-option>
-          </mat-select>
-        </mat-form-field>
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>City</mat-label>
+            <mat-select [(ngModel)]="application.city" required name="city" id="city">
+              <mat-option value="Oyo">Oyo</mat-option>
+              <mat-option value="Lagos">Lagos</mat-option>
+            </mat-select>
+          </mat-form-field>
 
-        <mat-form-field class="col-lg-6 form-field">
-          <mat-label>Gender</mat-label>
-          <mat-select [(ngModel)]="application.gender" required name="gender" id="gender">
-            <mat-option value="MALE">MALE</mat-option>
-            <mat-option value="FEMALE">FEMALE</mat-option>
-          </mat-select>
-        </mat-form-field>
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Gender</mat-label>
+            <mat-select [(ngModel)]="application.gender" required name="gender" id="gender">
+              <mat-option value="MALE">MALE</mat-option>
+              <mat-option value="FEMALE">FEMALE</mat-option>
+            </mat-select>
+          </mat-form-field>
 
-        <mat-form-field class="col-lg-6 form-field">
-          <mat-label>Proficiency</mat-label>
-          <mat-select [(ngModel)]="application.proficiency" required name="proficiency" id="proficiency">
-            <mat-option value="BEGINNER">BEGINNER</mat-option>
-            <mat-option value="INTERMEDIATE">INTERMEDIATE</mat-option>
-            <mat-option value="EXPERT">EXPERT</mat-option>
-          </mat-select>
-        </mat-form-field>
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Proficiency</mat-label>
+            <mat-select [(ngModel)]="application.proficiency" required name="proficiency" id="proficiency">
+              <mat-option value="BEGINNER">BEGINNER</mat-option>
+              <mat-option value="INTERMEDIATE">INTERMEDIATE</mat-option>
+              <mat-option value="EXPERT">EXPERT</mat-option>
+            </mat-select>
+          </mat-form-field>
 
-        <legend class="application-legend"><h1>Employment Details</h1></legend>
+          <legend class="application-legend"><h1>Employment Details</h1></legend>
 
-        <mat-form-field class="col-lg-6 form-field">
-          <mat-label>Salary Expectation</mat-label>
-          <input matInput type="number" required [(ngModel)]="application.salaryExpectation" name="salaryExpectation" id="salary-expectation">
-        </mat-form-field>
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Salary Expectation</mat-label>
+            <input matInput type="number" required [(ngModel)]="application.salaryExpectation" name="salaryExpectation" id="salary-expectation">
+          </mat-form-field>
 
-        <mat-form-field class="col-lg-6 form-field">
-          <mat-label>Current Organization</mat-label>
-          <input matInput type="text" required [(ngModel)]="application.currentOrganization" name="currentOrganization" id="current-organization">
-        </mat-form-field>
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Current Organization</mat-label>
+            <input matInput type="text" required [(ngModel)]="application.currentOrganization" name="currentOrganization" id="current-organization">
+          </mat-form-field>
 
-        <mat-form-field class="col-lg-6 form-field">
-          <mat-label>Employment Status</mat-label>
-          <mat-select [(ngModel)]="application.employmentStatus" required name="employmentStatus" id="employment-status">
-            <mat-option value="EMPLOYED">EMPLOYED</mat-option>
-            <mat-option value="UNEMPLOYED">UNEMPLOYED</mat-option>
-          </mat-select>
-        </mat-form-field>
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Employment Status</mat-label>
+            <mat-select [(ngModel)]="application.employmentStatus" required name="employmentStatus" id="employment-status">
+              <mat-option value="EMPLOYED">EMPLOYED</mat-option>
+              <mat-option value="UNEMPLOYED">UNEMPLOYED</mat-option>
+            </mat-select>
+          </mat-form-field>
 
-        <mat-form-field class="col-lg-6 form-field">
-          <mat-label>Current Job Title</mat-label>
-          <input matInput type="text" required [(ngModel)]="application.currentJob" name="currentJobTitle" id="current-job-title">
-        </mat-form-field>
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Current Job Title</mat-label>
+            <input matInput type="text" required [(ngModel)]="application.currentJob" name="currentJobTitle" id="current-job-title">
+          </mat-form-field>
 
-        <mat-form-field class="col-lg-6 form-field">
-          <mat-label>Total Year of Professional Experience</mat-label>
-          <input matInput type="number" required [(ngModel)]="application.totalYearOfExperience" name="totalYearOfExperience" id="total-year-of-experience">
-        </mat-form-field>
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Total Year of Professional Experience</mat-label>
+            <input matInput type="number" required [(ngModel)]="application.totalYearOfExperience" name="totalYearOfExperience" id="total-year-of-experience">
+          </mat-form-field>
 
-        <mat-form-field class="col-lg-6 form-field">
-          <mat-label>Prefered Work Type</mat-label>
-          <input matInput type="text" required [(ngModel)]="application.preferredWorkType" name="preferredWorkType" id="prefered-work-type">
-        </mat-form-field>
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Prefered Work Type</mat-label>
+            <input matInput type="text" required [(ngModel)]="application.preferredWorkType" name="preferredWorkType" id="prefered-work-type">
+          </mat-form-field>
 
-        <legend class="application-legend"><h1>Resume and Skills</h1></legend>
+          <legend class="application-legend"><h1>Skills</h1></legend>
+
+          <mat-form-field class="chip-list" appearance="fill">
+            <mat-label>Skills</mat-label>
+            <mat-chip-list #chipList aria-label="software skills chip list">
+              <mat-chip *ngFor="let skill of application.otherSkills" [selectable]="selectable"
+                       [removable]="removable" (removed)="removeChip(skill)">
+                {{skill}}
+                <button matChipRemove *ngIf="removable">
+                  <mat-icon>cancel</mat-icon>
+                </button>
+              </mat-chip>
+              <input placeholder="New Skill..."
+                     [matChipInputFor]="chipList"
+                     [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                     [matChipInputAddOnBlur]="addOnBlur"
+                     (matChipInputTokenEnd)="addChip($event)">
+            </mat-chip-list>
+          </mat-form-field>
+
+          <legend class="application-legend"><h1>Profile and Portfolio Links</h1></legend>
+
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Portfolio</mat-label>
+            <input matInput type="url" required pattern="https://.*" [(ngModel)]="application.portfolioUrl" name="Portfolio" id="portfolio">
+          </mat-form-field>
+
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Github profile</mat-label>
+            <input matInput type="url" required pattern="https://.*" [(ngModel)]="application.githubUrl" name="githubUrl" id="github-url">
+          </mat-form-field>
+
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>LinkedIn profile</mat-label>
+            <input matInput type="url" required pattern="https://.*" [(ngModel)]="application.linkedProfile" name="linkedInUrl" id="linkedIn-url">
+          </mat-form-field>
+
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Twitter profile</mat-label>
+            <input matInput type="url" required pattern="https://.*" [(ngModel)]="application.twitterUrl" name="twitterUrl" id="twitter-url">
+          </mat-form-field>
+
+          <legend class="application-legend"><h1>Additional Information</h1></legend>
+
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Additional Information</mat-label>
+            <textarea matInput type="text" cols="30" rows="10" [(ngModel)]="application.additionalInformation" name="additionalInformation" id="additionalInformation"></textarea>
+          </mat-form-field>
+
+          <div class="alert alert-danger" *ngIf="form_invalid">Cant submit form. Form Invalid</div>
+          <div class="alert alert-warning" *ngIf="alert_warn">{{message}}</div>
+          <div class="alert alert-success" *ngIf="alert_success">{{message}}</div>
+        </fieldset>
+        <button mat-raised-button color="primary" (click)="onSubmit(applicationForm)">Submit</button>
       </form>
       <aside class="application-aside col-lg-4 col-md-4">
         <div>

@@ -1,5 +1,8 @@
 <div class="appointment-wrapper">
   <div class="appointment-section container-fluid">
+    <div class="row" *ngIf="spin">
+      <mat-progress-spinner mode="indeterminate" class="spinner mat-spinner"></mat-progress-spinner>
+    </div>
     <div class="row">
       <form #appointmentForm="ngForm" class="appointment-form col-lg-8 col-md-8">
         <fieldset>
@@ -56,13 +59,13 @@
             <mat-label>Give the job details</mat-label>
             <textarea matInput name="jobDetails" id="jobDetails" cols="30" rows="10" [(ngModel)]="appointment.jobDetails" name="jobDetails" id="job-details" required></textarea>
           </mat-form-field>
-          <mat-error class="alert alert-danger" *ngIf="appointmentForm.submitted && appointmentForm.form.invalid">Cant submit form. Form Invalid</mat-error>
-          <div class="alert alert-warning" *ngIf="message!=='submission sucessful' && message !==undefined">{{message}}</div>
-          <div class="alert alert-success" *ngIf="message==='submission sucessful'">{{message}}</div>
+          <div class="alert alert-danger" *ngIf="form_invalid">Cant submit form. Form Invalid</div>
+          <div class="alert alert-warning" *ngIf="alert_warn">{{message}}</div>
+          <div class="alert alert-success" *ngIf="alert_success">{{message}}</div>
         </fieldset>
         <button mat-raised-button color="primary" (click)="onSubmit(appointmentForm)">Submit</button>
       </form>
-      <aside class="appointment-aside col-lg-4 col-md-4">
+      <aside class="appointment-aside col-lg-4 col-md-4" >
         <h1 class="appointment-heading mt-4">Create, Build, and Strengthen your bussiness with us</h1>
         <div>
           <img [src]="appointment_image" alt="appointment image" class="appointment-image">

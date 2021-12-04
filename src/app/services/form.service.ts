@@ -1,15 +1,16 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, map, of } from 'rxjs';
+import { Application } from '../types/Application';
+import { DataWrapper } from '../types/DataWrapper';
 import { Appointment } from '../types/Appointment';
-import { AppointmentWrapper } from '../types/AppointmentWrapper';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class FormService {
 
-  private appointmentUrl: string = "https://spectrangles-website-server.herokuapp.com/api/appointment"
   private encodedCredentials: string = `Basic ${btoa("spectrangletechnologies@gmail.com"+":"+"efbb588c-9374-4995-aa3f-87d614acd7f0")}`;
   private httpHeaders = new HttpHeaders();
 
@@ -20,19 +21,19 @@ export class FormService {
     .set("Content-Type","application/json");
   }
 
-  public postAppointmentForm(appontment: Appointment){
+  public postForm(data: Appointment | Application, url:string){
 
-    return this.http.post<Appointment>(this.appointmentUrl,appontment,{
+    return this.http.post<Appointment | Application>(url, data, {
       headers: this.httpHeaders
     }).pipe(map(value=>{
-        return <AppointmentWrapper>{
+        return <DataWrapper>{
           message: undefined,
-          appointment: value
+          data: value
         }
       }),catchError((error: Error) => {
-          return of(<AppointmentWrapper>{
+          return of(<DataWrapper>{
             message: error.message,
-            appointment : undefined
+            data : undefined
           });
       }));
   }

@@ -1,8 +1,7 @@
-import { Observable } from "rxjs";
 import { Application } from "./Application";
 import { Appointment } from "./Appointment";
 
-export type AppointmentWrapper = {
+export type DataWrapper = {
   message: string | undefined;
-  appointment : Appointment | undefined
+  data : Application | Appointment | undefined
 }
