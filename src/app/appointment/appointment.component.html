@@ -1,9 +1,9 @@
-<div class="wrapper">
-  <div class="section container-fluid">
+<div class="appointment-wrapper">
+  <div class="appointment-section container-fluid">
     <div class="row">
-      <form #appointmentForm="ngForm" class="form col-lg-8 col-md-8">
+      <form #appointmentForm="ngForm" class="appointment-form col-lg-8 col-md-8">
         <fieldset>
-          <legend class="legend col-12"><h1>Get started with us</h1></legend>
+          <legend class="appointment-legend col-12"><h1>Get started with us</h1></legend>
           <mat-form-field class="col-lg-6 form-field">
             <mat-label>Company/Personal name</mat-label>
             <input matInput type="text" [(ngModel)]="appointment.companyName" name="companyName" id="company-name" required>
@@ -50,7 +50,7 @@
             </mat-select>
           </mat-form-field>
 
-          <legend class="legend col-12"><h1>Additional Information</h1></legend>
+          <legend class="appointment-legend col-12"><h1>Additional Information</h1></legend>
 
           <mat-form-field class="col-lg-6 form-field">
             <mat-label>Give the job details</mat-label>
@@ -62,8 +62,8 @@
         </fieldset>
         <button mat-raised-button color="primary" (click)="onSubmit(appointmentForm)">Submit</button>
       </form>
-      <aside class="aside col-lg-4 col-md-4">
-        <h1 class="heading">Create, Build, and Strengthen your bussiness with us</h1>
+      <aside class="appointment-aside col-lg-4 col-md-4">
+        <h1 class="appointment-heading mt-4">Create, Build, and Strengthen your bussiness with us</h1>
         <div>
           <img [src]="appointment_image" alt="appointment image" class="appointment-image">
         </div>

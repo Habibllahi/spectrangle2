@@ -1,36 +1,5 @@
-.wrapper{
-  background-color: white;
-  color: black;
-}
-.legend{
-  color: blue;
-  font-weight: bold;
-  font-family: 'Merriweather Sans', sans-serif;
-}
-.aside{
-  color: white;
-  background-color: blue;
-}
-.heading{
-  margin-top: 100px;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-  font-weight: bold;
-}
-.form{
-  padding: 40px;
-
-}
-.form-field{
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.2rem;
-}
 .appointment-image{
   width: 100%;
   height: 100%;
 }
 
-.section{
-  margin-top: 400px; /*change accordingly to ensure only the banner-main class of the app.component.html shows in the screen until scroll*/
-}

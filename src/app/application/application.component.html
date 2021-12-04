@@ -1,8 +1,8 @@
-<div class="wrapper">
-  <div class="section container-fluid">
+<div class="application-wrapper">
+  <div class="application-section container-fluid">
     <div class="row">
-      <form #applicationForm="ngForm" class="form col-lg-8 col-md-8">
-        <legend class="legend"><h1>Personal Information</h1></legend>
+      <form #applicationForm="ngForm" class="application-form col-lg-8 col-md-8">
+        <legend class="application-legend"><h1>Personal Information</h1></legend>
         <mat-form-field class="col-lg-6 form-field">
           <mat-label>First name</mat-label>
           <input matInput type="text" [(ngModel)]="application.firstName" name="firstName" id="first-name" required>
@@ -48,13 +48,13 @@
         </mat-form-field>
 
       </form>
-      <aside class="aside col-lg-4 col-md-4">
+      <aside class="application-aside col-lg-4 col-md-4">
         <div>
           <img [src]="application_image" alt="appointment image" class="application-image">
         </div>
-        <h1 class="heading">Join Our Network</h1>
+        <h1 class="application-heading mt-4 mb-2">Join Our Network</h1>
         <p class="content">{{join_us_content}}</p>
-        <h1 class="heading">What to expect</h1>
+        <h1 class="application-heading mt-4 mb-2">What to expect</h1>
         <ul>
           <li *ngFor="let item of what_to_expect" class="content">{{item}}</li>
         </ul>

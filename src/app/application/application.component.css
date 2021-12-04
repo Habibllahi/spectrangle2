@@ -1,24 +1,7 @@
-.wrapper{
-  background-color: white;
-  color: black;
-}
-.legend{
-  color: blue;
-  font-weight: bold;
-  font-family: 'Merriweather Sans', sans-serif;
-}
-.aside{
-  color: white;
-  background-color: blue;
-}
-.section{
-  margin-top: 400px; /*change accordingly to ensure only the banner-main class of the app.component.html shows in the screen until scroll*/
-}
 .heading{
   margin-top: 20px;
   text-align: left;
   font-weight: bold;
-  font-family: 'Merriweather Sans', sans-serif;
 }
 .content{
   font-family: 'Cormorant Garamond', serif;
@@ -31,11 +14,5 @@
   width: 100%;
   height: 100%;
 }
-.form-field{
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.2rem;
-}
-.form{
-  padding: 40px;
 
-}
+
