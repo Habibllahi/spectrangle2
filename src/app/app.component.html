@@ -29,7 +29,7 @@
     <p class="font-weight-bold headline">
       {{headline}}
     </p>
-    <button mat-raised-button color="primary" (click)='closeNav()' class="headline-button">{{headlineButton}}</button>
+    <button mat-raised-button color="primary" (click)='closeNav()' class="headline-button" [routerLink]="['/appointment']" routerLinkActive="router-link-active" >{{headlineButton}}</button>
   </div>
 </header>
 <main>

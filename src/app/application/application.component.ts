@@ -22,7 +22,6 @@ export class ApplicationComponent implements OnInit {
   ]
 
 
-
   public application: Application = {
     additionalInformation: "",
     city: "",
@@ -30,9 +29,9 @@ export class ApplicationComponent implements OnInit {
     currentJob: "",
     currentOrganization: "",
     email: "",
-    employmentStatus:EmploymentStatus.UNEMPLOYED,
+    employmentStatus:EmploymentStatus[0].toString(),
     firstName:"",
-    gender: Gender.FEMALE,
+    gender: Gender[0].toString(),
     githubUrl: "",
     lastName: "",
     linkedProfile: "",
@@ -40,7 +39,7 @@ export class ApplicationComponent implements OnInit {
     phoneNumber:"",
     portfolioUrl:"",
     preferredWorkType:"",
-    proficiency: proficiency.BEGINNER,
+    proficiency: proficiency[0].toString(),
     salaryExpectation:0,
     totalYearOfExperience:0,
     twitterUrl:""

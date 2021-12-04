@@ -20,7 +20,7 @@
 
         <mat-form-field class="col-lg-6 form-field">
           <mat-label>Phone Number</mat-label>
-          <input matInput type="tel" [(ngModel)]="application.firstName" name="emailAddress" id="email-address" required>
+          <input matInput type="tel" [(ngModel)]="application.phoneNumber" name="phoneNumber" id="phone-number" required>
         </mat-form-field>
 
         <mat-form-field class="col-lg-6 form-field">
@@ -41,12 +41,57 @@
 
         <mat-form-field class="col-lg-6 form-field">
           <mat-label>Gender</mat-label>
-          <mat-select [(ngModel)]="application.city" required name="gender" id="gender">
+          <mat-select [(ngModel)]="application.gender" required name="gender" id="gender">
             <mat-option value="MALE">MALE</mat-option>
             <mat-option value="FEMALE">FEMALE</mat-option>
           </mat-select>
         </mat-form-field>
 
+        <mat-form-field class="col-lg-6 form-field">
+          <mat-label>Proficiency</mat-label>
+          <mat-select [(ngModel)]="application.proficiency" required name="proficiency" id="proficiency">
+            <mat-option value="BEGINNER">BEGINNER</mat-option>
+            <mat-option value="INTERMEDIATE">INTERMEDIATE</mat-option>
+            <mat-option value="EXPERT">EXPERT</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <legend class="application-legend"><h1>Employment Details</h1></legend>
+
+        <mat-form-field class="col-lg-6 form-field">
+          <mat-label>Salary Expectation</mat-label>
+          <input matInput type="number" required [(ngModel)]="application.salaryExpectation" name="salaryExpectation" id="salary-expectation">
+        </mat-form-field>
+
+        <mat-form-field class="col-lg-6 form-field">
+          <mat-label>Current Organization</mat-label>
+          <input matInput type="text" required [(ngModel)]="application.currentOrganization" name="currentOrganization" id="current-organization">
+        </mat-form-field>
+
+        <mat-form-field class="col-lg-6 form-field">
+          <mat-label>Employment Status</mat-label>
+          <mat-select [(ngModel)]="application.employmentStatus" required name="employmentStatus" id="employment-status">
+            <mat-option value="EMPLOYED">EMPLOYED</mat-option>
+            <mat-option value="UNEMPLOYED">UNEMPLOYED</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="col-lg-6 form-field">
+          <mat-label>Current Job Title</mat-label>
+          <input matInput type="text" required [(ngModel)]="application.currentJob" name="currentJobTitle" id="current-job-title">
+        </mat-form-field>
+
+        <mat-form-field class="col-lg-6 form-field">
+          <mat-label>Total Year of Professional Experience</mat-label>
+          <input matInput type="number" required [(ngModel)]="application.totalYearOfExperience" name="totalYearOfExperience" id="total-year-of-experience">
+        </mat-form-field>
+
+        <mat-form-field class="col-lg-6 form-field">
+          <mat-label>Prefered Work Type</mat-label>
+          <input matInput type="text" required [(ngModel)]="application.preferredWorkType" name="preferredWorkType" id="prefered-work-type">
+        </mat-form-field>
+
+        <legend class="application-legend"><h1>Resume and Skills</h1></legend>
       </form>
       <aside class="application-aside col-lg-4 col-md-4">
         <div>

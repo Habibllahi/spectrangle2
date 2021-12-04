@@ -3,25 +3,25 @@ import { Gender } from "./Gender";
 import { proficiency } from "./Proficiency";
 
 export type Application = {
-  firstName: String;
-  lastName: String;
-  email: String;
-  phoneNumber : String,
-  city: String,
-  country : String;
-  gender: Gender;
-  proficiency: proficiency;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber : string,
+  city: string,
+  country : string;
+  gender: string;
+  proficiency: string;
   salaryExpectation : number;
-  currentOrganization : String;
-  employmentStatus: EmploymentStatus;
-  currentJob : String;
+  currentOrganization : string;
+  employmentStatus: string;
+  currentJob : string;
   totalYearOfExperience : number;
-  preferredWorkType : String;
-  otherSkills: String[];
+  preferredWorkType : string;
+  otherSkills: string[];
   linkedProfile: string;
   portfolioUrl : string;
   twitterUrl : string;
   githubUrl : string;
-  additionalInformation : String;
+  additionalInformation : string;
 
 }
