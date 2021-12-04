@@ -1,1 +1,73 @@
-<p>appointment works!</p>
+<div class="wrapper">
+  <div class="section container-fluid">
+    <div class="row">
+      <form #appointmentForm="ngForm" class="form col-lg-8 col-md-8">
+        <fieldset>
+          <legend class="legend col-12"><h1>Get started with us</h1></legend>
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Company/Personal name</mat-label>
+            <input matInput type="text" [(ngModel)]="appointment.companyName" name="companyName" id="company-name" required>
+          </mat-form-field>
+
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Industry</mat-label>
+            <mat-select [(ngModel)]="appointment.industry" name="industry" id="industry" required>
+              <mat-option value="Software">Software</mat-option>
+              <mat-option value="Telecommunication">Telecommunication</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Website</mat-label>
+            <input matInput type="text" [(ngModel)]="appointment.website" name="website" id="website" required>
+          </mat-form-field>
+
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Work Email Address</mat-label>
+            <input matInput type="email" [(ngModel)]="appointment.workAddress" name="workEmailAddress" id="work-email-address" required>
+          </mat-form-field>
+
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Position</mat-label>
+            <input matInput type="text" [(ngModel)]="appointment.position" name="position" id="position" required>
+          </mat-form-field>
+
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Phone number</mat-label>
+            <input matInput type="tel" [(ngModel)]="appointment.phoneNumber" name="phoneNumber" id="phone-number" required minlength="11">
+          </mat-form-field>
+
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Work type</mat-label>
+            <input matInput type="text" [(ngModel)]="appointment.workType" name="workType" id="work-type" required>
+          </mat-form-field>
+
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Country</mat-label>
+            <mat-select [(ngModel)]="appointment.country" name="country" id="country" required>
+              <mat-option value="Nigeria">Nigeria</mat-option>
+              <mat-option value="United State">United State</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <legend class="legend col-12"><h1>Additional Information</h1></legend>
+
+          <mat-form-field class="col-lg-6 form-field">
+            <mat-label>Give the job details</mat-label>
+            <textarea matInput name="jobDetails" id="jobDetails" cols="30" rows="10" [(ngModel)]="appointment.jobDetails" name="jobDetails" id="job-details" required></textarea>
+          </mat-form-field>
+          <mat-error class="alert alert-danger" *ngIf="appointmentForm.submitted && appointmentForm.form.invalid">Cant submit form. Form Invalid</mat-error>
+          <div class="alert alert-warning" *ngIf="message!=='submission sucessful' && message !==undefined">{{message}}</div>
+          <div class="alert alert-success" *ngIf="message==='submission sucessful'">{{message}}</div>
+        </fieldset>
+        <button mat-raised-button color="primary" (click)="onSubmit(appointmentForm)">Submit</button>
+      </form>
+      <aside class="aside col-lg-4 col-md-4">
+        <h1 class="heading">Create, Build, and Strengthen your bussiness with us</h1>
+        <div>
+          <img [src]="appointment_image" alt="appointment image" class="appointment-image">
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>

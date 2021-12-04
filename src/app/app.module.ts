@@ -10,6 +10,7 @@ import { OurCultureModule } from './our-culture/our-culture.module';
 import { SharedModule } from './shared/shared.module';
 import { ApplicationModule } from './application/application.module';
 import { AppointmentModule } from './appointment/appointment.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { AppointmentModule } from './appointment/appointment.module';
     AppRoutingModule,
     ApplicationModule,
     AppointmentModule,
-
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

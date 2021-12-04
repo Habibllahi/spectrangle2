@@ -1,4 +1,3 @@
-import { Url } from "url";
 import { EmploymentStatus } from "./EmploymentStatus";
 import { Gender } from "./Gender";
 import { proficiency } from "./Proficiency";
@@ -19,10 +18,10 @@ export type Application = {
   totalYearOfExperience : number;
   preferredWorkType : String;
   otherSkills: String[];
-  linkedProfile: Url;
-  portfolioUrl : Url;
-  twitterUrl : Url;
-  githubUrl : Url;
+  linkedProfile: string;
+  portfolioUrl : string;
+  twitterUrl : string;
+  githubUrl : string;
   additionalInformation : String;
 
 }

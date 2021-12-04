@@ -1,1 +1,64 @@
-<p>application works!</p>
+<div class="wrapper">
+  <div class="section container-fluid">
+    <div class="row">
+      <form #applicationForm="ngForm" class="form col-lg-8 col-md-8">
+        <legend class="legend"><h1>Personal Information</h1></legend>
+        <mat-form-field class="col-lg-6 form-field">
+          <mat-label>First name</mat-label>
+          <input matInput type="text" [(ngModel)]="application.firstName" name="firstName" id="first-name" required>
+        </mat-form-field>
+
+        <mat-form-field class="col-lg-6 form-field">
+          <mat-label>Last name</mat-label>
+          <input matInput type="text" [(ngModel)]="application.lastName" name="lastName" id="last-name" required>
+        </mat-form-field>
+
+        <mat-form-field class="col-lg-6 form-field">
+          <mat-label>Email Address</mat-label>
+          <input matInput type="email" [(ngModel)]="application.email" name="emailAddress" id="email-address" required>
+        </mat-form-field>
+
+        <mat-form-field class="col-lg-6 form-field">
+          <mat-label>Phone Number</mat-label>
+          <input matInput type="tel" [(ngModel)]="application.firstName" name="emailAddress" id="email-address" required>
+        </mat-form-field>
+
+        <mat-form-field class="col-lg-6 form-field">
+          <mat-label>Country</mat-label>
+          <mat-select [(ngModel)]="application.country" required name="country" id="country">
+            <mat-option value="Nigeria">Nigeria</mat-option>
+            <mat-option value="USA">USA</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="col-lg-6 form-field">
+          <mat-label>City</mat-label>
+          <mat-select [(ngModel)]="application.city" required name="city" id="city">
+            <mat-option value="Oyo">Oyo</mat-option>
+            <mat-option value="Lagos">Lagos</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="col-lg-6 form-field">
+          <mat-label>Gender</mat-label>
+          <mat-select [(ngModel)]="application.city" required name="gender" id="gender">
+            <mat-option value="MALE">MALE</mat-option>
+            <mat-option value="FEMALE">FEMALE</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </form>
+      <aside class="aside col-lg-4 col-md-4">
+        <div>
+          <img [src]="application_image" alt="appointment image" class="application-image">
+        </div>
+        <h1 class="heading">Join Our Network</h1>
+        <p class="content">{{join_us_content}}</p>
+        <h1 class="heading">What to expect</h1>
+        <ul>
+          <li *ngFor="let item of what_to_expect" class="content">{{item}}</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</div>

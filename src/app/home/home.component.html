@@ -62,7 +62,7 @@
       <div class="book-appointment-heading  col-sm-5 col-md-7">
         <span class="x">{{have_you_part1}}</span>
         <span class="y">{{have_you_part2}} </span>
-        <button mat-raised-button class="mt-3 mb-3 d-block book-apointment-button" >{{book_appointment}}</button>
+        <button mat-raised-button class="mt-3 mb-3 d-block book-apointment-button" [routerLink]="['/appointment']" routerLinkActive="router-link-active" >{{book_appointment}}</button>
       </div>
       <div class=" col-sm-7 col-md-5 book-apointment-img-block">
         <img [src]="book_apointment_img" alt="book apointment image">

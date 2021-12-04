@@ -1,11 +1,11 @@
 export type Appointment = {
-  companyName: String;
-  industry: String;
-  website: String;
+  companyName: string;
+  industry: string;
+  website: string;
   workAddress : String;
-  position: String;
-  phoneNumber: number;
-  workType: String;
-  country : String;
-  jobDetails : String;
+  position: string;
+  phoneNumber: string;
+  workType: string;
+  country : string;
+  jobDetails : string;
 }
