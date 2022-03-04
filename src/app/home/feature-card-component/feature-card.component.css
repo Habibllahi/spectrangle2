@@ -14,11 +14,11 @@
   border-radius: 5%;
 }
 .card-title{
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: white;
 }
 .card-body{
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Montserrat', sans-serif;
   color: white;
   font-size: 1rem;
 }
@@ -30,20 +30,30 @@
   height: 210px;
   background-color: rgb(83, 195, 233);
 }
-@media only screen and (min-width: 753px){
+
+@media only screen and (max-width: 752.9px){
   .card{
-    height: 210px;
+    height: 300px;
   }
   .card:hover{
-    height: 220px;
+    height: 320px;
+  }
+}
+
+@media only screen and (min-width: 753px){
+  .card{
+    height: 300px;
+  }
+  .card:hover{
+    height: 320px;
   }
 }
 
 @media only screen and (min-width: 992px){
   .card{
-    height: 300px;
+    height: 320px;
   }
   .card:hover{
-    height: 310px;
+    height: 340px;
   }
 }

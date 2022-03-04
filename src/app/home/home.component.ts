@@ -23,52 +23,38 @@ export class HomeComponent implements OnInit, OnDestroy {
   public card_4_body: string = "Design thinking and agile principles are at the core of how our teams operate";
   public testimonials: Testimonial[] = [
     {
-      imageSrc: '../assets/1.jpg',
-      quote: 'We at Spectrangle hire and manage the best talents for in-house projects and external companies globally, thereby creating, building, and strengthing your project and products with the best team available.',
+      imageSrc: '../assets/1.png',
+      quote: 'Techprenuer, investor and problem solver.',
       selected:false,
-      name:'John Doe',
-      title: 'CEO Opened Gate',
+      name:'Olatunji Segun',
+      title: 'Co-Founder & CEO',
       id: 1
     },
     {
-      imageSrc: '../assets/2.jpg',
-      quote: 'I at Spectrangle hire and manage the best talents for in-house projects and external companies globally, thereby creating, building, and strengthing your project and products with the best team available.',
+      imageSrc: '../assets/2.png',
+      quote: 'Professing technology, arts and creativity.' +
+      'Bringing exquisite innovations to the world of Arts, science and the general philosophy of the world itself' +
+      'A techist, creator, and media expert...managing, making more corporate and digitalising the existence of corporations/organisations/individual brands.',
       selected:false,
-      name:'John Doe',
-      title: 'CEO Opened Gate',
+      name:'Bewaji Emmanuel',
+      title: 'Co-Founder & COO',
       id: 2
     },
     {
-      imageSrc: '../assets/3.jpg',
-      quote: 'you at Spectrangle hire and manage the best talents for in-house projects and external companies globally, thereby creating, building, and strengthing your project and products with the best team available.',
+      imageSrc: '../assets/3.png',
+      quote: 'Excellent UI/UX designer, bright in graphics with excellent coomunication skills ',
       selected:false,
-      name:'John Doe',
-      title: 'CEO Opened Gate',
+      name:'Stephen Onyekachi',
+      title: 'Communication officer & UI/UX designer',
       id: 3
     },
     {
       imageSrc: '../assets/4.jpg',
-      quote: 'None at Spectrangle hire and manage the best talents for in-house projects and external companies globally, thereby creating, building, and strengthing your project and products with the best team available.',
+      quote: 'Fullstack web developer and 3D animation enthusiast. Love coding',
       selected:false,
-      name:'John Doe',
-      title: 'CEO Opened Gate',
+      name:'Hamzat Habibllahi',
+      title: 'Lead Developer',
       id: 4
-    },
-    {
-      imageSrc: '../assets/3.jpg',
-      quote: 'you at Spectrangle hire and manage the best talents for in-house projects and external companies globally, thereby creating, building, and strengthing your project and products with the best team available.',
-      selected:false,
-      name:'John Doe',
-      title: 'CEO Opened Gate',
-      id: 5
-    },
-    {
-      imageSrc: '../assets/4.jpg',
-      quote: 'None at Spectrangle hire and manage the best talents for in-house projects and external companies globally, thereby creating, building, and strengthing your project and products with the best team available.',
-      selected:false,
-      name:'John Doe',
-      title: 'CEO Opened Gate',
-      id: 6
     }
   ]
   public why_work_with_us: string = 'We at Spectrangle hire and manage the best talents for in-house projects and external companies globally, thereby' +

@@ -48,7 +48,7 @@
 /* small screen navigation style*/
 .small{
   background-color: rgba(0, 0, 0, 0.945);
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Montserrat', sans-serif;
  }
 .spacer-small{
   flex: 1 1 auto;
@@ -65,7 +65,7 @@
   background-color: transparent;
   background: transparent;
   opacity: 0.9;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Montserrat', sans-serif;
  }
 .medium a{
   max-width: fit-content;
@@ -98,16 +98,16 @@
   height: fit-content;
   text-align: start;
   line-height: 1.6em;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .headline-button{
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /**Styles relating to footer **/
 .footer-wrapper{
   background-color: black;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .footer-wrapper.company-name{
   padding-top: auto;

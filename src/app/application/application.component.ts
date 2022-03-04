@@ -17,14 +17,14 @@ import { Subscription } from 'rxjs';
 })
 export class ApplicationComponent implements OnInit, OnDestroy {
   public application_image: String = "../assets/book_apointment_img.jpg"
-  public join_us_content: string = `Spectrangles hire and manages best talents for in-house projects
-  and external companies globally.we are currently accepting application for Fullstack developer,
-  Frontend developer, Backend developer, Dev Ops engineers, UI/UX designer, Cybersecurity engineers,
-  Graphics designer data scientist, content developer and digital marketer.`;
+  public join_us_content: string = `Spectrangle hires and manages the best remote talents
+  for leading companies globally. We are currently accepting applications for Fullstack
+  developers, Frontend developers, Backend developers and UI/UX designers.`;
 
   public what_to_expect: string[] = [
     `Drills testing your communication reason and technical skills`,
-    `if accepted you will get proper package and more job experiences`
+    `if accepted you will receive private job opportunities from local and global companies
+     with premium packages.`
   ]
 
 

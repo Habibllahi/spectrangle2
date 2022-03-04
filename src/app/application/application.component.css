@@ -4,10 +4,10 @@
   font-weight: bold;
 }
 .content{
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
   line-height: 1.5rem;
-  font-weight: bold;
+  font-weight: 400;
 }
 .application-image{
   margin-top: 20px;
