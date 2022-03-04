@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   public testimonials: Testimonial[] = [
     {
       imageSrc: '../assets/1.png',
-      quote: 'Techprenuer, investor and problem solver.',
+      quote: 'Techprenuer and problem solver. Tellecomunication bussiness investor.',
       selected:false,
       name:'Olatunji Segun',
       title: 'Co-Founder & CEO',
