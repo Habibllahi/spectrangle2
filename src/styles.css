@@ -14,7 +14,7 @@ body {
 .appointment-legend,.application-legend{
   color: blue;
   font-weight: bold;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .appointment-aside,.application-aside{
   color: white;
@@ -24,13 +24,13 @@ body {
   margin-top: 400px; /*change accordingly to ensure only the banner-main class of the app.component.html shows in the screen until scroll*/
 }
 .appointment-heading,.application-heading{
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .appointment-form,.application-form{
   padding: 40px;
 
 }
 .form-field{
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
 }
