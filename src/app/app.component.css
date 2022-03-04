@@ -103,11 +103,14 @@
 .headline-button{
   font-family: 'Montserrat', sans-serif;
 }
-
+.footer-heading{
+  font-weight: 900;
+}
 /**Styles relating to footer **/
 .footer-wrapper{
   background-color: black;
   font-family: 'Montserrat', sans-serif;
+  font-size: smaller;
 }
 .footer-wrapper.company-name{
   padding-top: auto;

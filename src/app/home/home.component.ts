@@ -24,7 +24,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   public testimonials: Testimonial[] = [
     {
       imageSrc: '../assets/1.png',
-      quote: 'Techprenuer and problem solver. Tellecomunication bussiness investor.',
+      quote: 'Techprenuer and problem solver. Tellecomunication bussiness investor. A change agent and champion '+
+      'for VTU-based tech solutions.',
       selected:false,
       name:'Olatunji Segun',
       title: 'Co-Founder & CEO',
@@ -42,14 +43,15 @@ export class HomeComponent implements OnInit, OnDestroy {
     },
     {
       imageSrc: '../assets/3.png',
-      quote: 'Excellent UI/UX designer, bright in graphics with excellent coomunication skills ',
+      quote: 'Seasoned digital technology enthusiast. Seeing businesses and individuals leverage on tech to access the next'+
+      ' levels in their adventure is his passion',
       selected:false,
       name:'Stephen Onyekachi',
-      title: 'Communication officer & UI/UX designer',
+      title: 'Communication officer',
       id: 3
     },
     {
-      imageSrc: '../assets/4.jpg',
+      imageSrc: '../assets/4.png',
       quote: 'Fullstack web developer and 3D animation enthusiast. Love coding',
       selected:false,
       name:'Hamzat Habibllahi',

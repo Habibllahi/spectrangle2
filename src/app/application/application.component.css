@@ -1,13 +1,13 @@
 .heading{
   margin-top: 20px;
   text-align: left;
-  font-weight: bold;
+  font-weight: 900;
 }
 .content{
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1rem;
   line-height: 1.5rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 .application-image{
   margin-top: 20px;
