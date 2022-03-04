@@ -86,7 +86,7 @@
 }
 .medium-nav-sector-a{
   flex: 1 1 auto;
-  font-size: 1.3rem;
+  font-size: 1.0rem;
 }
 
 
@@ -110,7 +110,8 @@
 .footer-wrapper{
   background-color: black;
   font-family: 'Montserrat', sans-serif;
-  font-size: smaller;
+  font-size: large;
+  font-weight: 200;
 }
 .footer-wrapper.company-name{
   padding-top: auto;

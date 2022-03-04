@@ -27,36 +27,43 @@ export class HomeComponent implements OnInit, OnDestroy {
       quote: 'Techprenuer and problem solver. Tellecomunication bussiness investor. A change agent and champion '+
       'for VTU-based tech solutions.',
       selected:false,
-      name:'Olatunji Segun',
+      name:'Segun Olatunde M.',
       title: 'Co-Founder & CEO',
       id: 1
     },
     {
       imageSrc: '../assets/2.png',
-      quote: 'Professing technology, arts and creativity.' +
-      'Bringing exquisite innovations to the world of Arts, science and the general philosophy of the world itself' +
-      'A techist, creator, and media expert...managing, making more corporate and digitalising the existence of corporations/organisations/individual brands.',
+      quote: 'Professing technology, arts and creativity. Bringing exquisite innovations to the world of Arts, '+
+      'science and the general philosophy of the world itself.',
       selected:false,
-      name:'Bewaji Emmanuel',
+      name:'Emmanuel Bewaji O.',
       title: 'Co-Founder & COO',
       id: 2
+    },
+    {
+      imageSrc: '../assets/5.png',
+      quote: 'Techprenuer and problem solver.',
+      selected:false,
+      name:'Adeyemi Ayeni T.',
+      title:  'Co-Founder',
+      id: 3
     },
     {
       imageSrc: '../assets/3.png',
       quote: 'Seasoned digital technology enthusiast. Seeing businesses and individuals leverage on tech to access the next'+
       ' levels in their adventure is his passion',
       selected:false,
-      name:'Stephen Onyekachi',
-      title: 'Communication officer',
-      id: 3
+      name:'Stephen Onyekachi A.',
+      title: 'Communication Officer',
+      id: 4
     },
     {
       imageSrc: '../assets/4.png',
       quote: 'Fullstack web developer and 3D animation enthusiast. Love coding',
       selected:false,
-      name:'Hamzat Habibllahi',
+      name:'Habibllahi Hamzat',
       title: 'Lead Developer',
-      id: 4
+      id: 5
     }
   ]
   public why_work_with_us: string = 'We at Spectrangle hire and manage the best talents for in-house projects and external companies globally, thereby' +
