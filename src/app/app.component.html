@@ -8,7 +8,7 @@
       </mat-toolbar-row>
       <mat-toolbar-row *ngIf="navState==='open'"><a class="small-nav-sector-a" (click)='toggleNav()' [routerLink]="['/home']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">Home</a></mat-toolbar-row>
       <mat-toolbar-row *ngIf="navState==='open'"><a class="small-nav-sector-a" (click)='toggleNav()' [routerLink]="['/appointment']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">Request service</a></mat-toolbar-row>
-      <mat-toolbar-row *ngIf="navState==='open'"><a class="small-nav-sector-a" (click)='toggleNav()' [routerLink]="['/our-culture']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">Our culture</a></mat-toolbar-row>
+      <!--<mat-toolbar-row *ngIf="navState==='open'"><a class="small-nav-sector-a" (click)='toggleNav()' [routerLink]="['/our-culture']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">Our culture</a></mat-toolbar-row>-->
       <mat-toolbar-row *ngIf="navState==='open'"><a class="small-nav-sector-a" (click)='toggleNav()' [routerLink]="['/application']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">Join us</a></mat-toolbar-row>
     </mat-toolbar>
   </nav>
@@ -50,7 +50,7 @@
           <h2 class="footer-heading">Menu</h2>
           <a class='' [routerLink]="['/home']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">Home</a>
           <a class='' [routerLink]="['/appointment']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">Request service</a>
-          <a class='' [routerLink]="['/our-culture']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">Our culture</a>
+          <!--<a class='' [routerLink]="['/our-culture']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">Our culture</a>-->
           <a class='' [routerLink]="['/application']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">Join us</a>
         </div>
         <div class="col-lg-3 col-sm-6 col-12 mb-2">

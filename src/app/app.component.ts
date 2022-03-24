@@ -22,11 +22,11 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit{
     {
       link:'Request service',
       fragment: '/appointment'
-    },
+    }/*,
     {
       link:'Our culture',
       fragment: '/our-culture'
-    },
+    }*/,
     {
       link:'Join us',
       fragment: '/application'
